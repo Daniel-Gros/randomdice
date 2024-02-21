@@ -6,8 +6,14 @@ const player2 = document.getElementById("player-2");
 let currentPlayer;
 let dice = Math.floor(Math.random() * 6 + 1);
 letDicePicture = document.getElementById("dice-picture");
+
 let currentScore = 0;
+let currentScorePlayer1 = document.getElementById("currentscorep1");
+let currentScorePlayer2 = document.getElementById("currentscorep2");
+
 let totalScore = 0;
+let totalScorePlayer1 = document.getElementById("totalscorep1");
+let totalScorePlayer2 = document.getElementById("totalscorep2");
 
 // ****** Variables des face du dé ******
 
