@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Randon Dice</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="container pt-2 mt-4">
+      
+      <!-- BLOC NEW GAME 1ERE ROW -->
+
+      <div class="new-game text-center pb-4">
+            <span class="material-symbols-outlined add_circle">
+            add_circle
+            </span> 
+            <input type="submit" name="newgame" id="newgame" value="NEWGAME">
+        </div>
+
+      <!-- 2EME ROW DE LA GRILLE DU JEU -->
+
+      <div class="row">
+      
+        <!-- BLOC PLAYER 1 -->
+        <div id="player-1" class=" col-md-5 p-2">
+            <p>PLAYER 1</p>
+        </div>
+        
+        <div class="col-md-2 mt-3">
+          <!-- SPACEUR -->
+        </div>
+
+        <!-- BLOC PLAYER 2 -->
+        <div id="player-2" class="col-md-5 p-2">
+            <p>PLAYER 2</p>
+        </div>
+      </div>
+
+      <!-- BLOC 3EME ROW DE LA GRILLE DU JEU -->
+
+      <div class="row pt-2">
+        <div class="total-score-1 col-md-5 mt-4">
+          0
+        </div>
+        <div class="col-md-2">
+          <div class="dice-images">
+            <img src="images/dice-1.svg" alt="Dé 1" id="face1">
+            <!-- <img src="images/dice-2.svg" alt="Dé 2"id="face2">
+            <img src="images/dice-3.svg" alt="Dé 3"id="face3">
+            <img src="images/dice-4.svg" alt="Dé 4"id="face4">
+            <img src="images/dice-5.svg" alt="Dé 5"id="face5">
+            <img src="images/dice-6.svg" alt="Dé 6"id="face6"> -->
+        </div>
+        
+          </div>
+          <div class="col-md-5 total-score-2 mt-4">
+            0
+          </div>
+        </div>
+
+        <!-- BLOC 4EME ROW DE LA GRILLE DU JEU -->
+        <div class="row pt-2">
+          <div class="current-dice col-md-5  p-2">
+            <div class="current-square">
+            <div>CURRENT</div>
+            <div class="current-score-1">
+              0
+            </div>
+          </div>
+          </div>
+          <div class="play-action col-md-2 text-center">
+              <input type="submit" class="roll-dice" value="ROLL DICE">
+                <span class="material-symbols-outlined">
+                change_circle
+                </span>
+                <br><br>
+              <input type="submit" class="hold-dice" value="HOLD">
+              <span class="material-symbols-outlined">
+                arrow_circle_down
+                </span>
+          </div>
+          <div class="current-dice col-md-5 p-2">
+            <div class="current-square">
+            <div>CURRENT</div>
+            <div class="current-score-2">
+              0
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <h6 class="text-center">Copyright © 2024 - Random Dice Projet Étudiant Daniel Gros</h6>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+      <script src="app.js"></script>
+    </div>
+  </body>
+</html>
