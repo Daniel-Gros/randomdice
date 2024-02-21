@@ -110,16 +110,6 @@ function chooseFirstPlayer() {
   alert(`C'est ${currentPlayer.innerHTML} qui commence !`);
 }
 
-switchTurn();
-
-function switchTurn() {
-  if (currentPlayer === player1) {
-    player1turn();
-  } else {
-    player2turn();
-  }
-}
-
 // ****** FONCTIONS DE JEU ******
 
 function rollDice() {
@@ -127,6 +117,7 @@ function rollDice() {
   diceFace();
   return dice;
 }
+
 rollDiceButton();
 
 function rollDiceButton() {
@@ -141,6 +132,16 @@ if (dice !== 1) {
 }
 function holdButton() {
   document.getElementsByClassName("hold-dice").addEventListener("click", hold);
+}
+
+switchTurn();
+
+function switchTurn() {
+  if (currentPlayer === player1) {
+    player1turn();
+  } else {
+    player2turn();
+  }
 }
 
 // function currentPoints() {
