@@ -1,11 +1,14 @@
 // ****** DÉFINITION DES VARIABLES & CONSTANTES ******
 
 const newGameButton = document.getElementById("newgame");
+const rollDiceButton = document.getElementById("roll_dice_button");
+const holdDiceButton = document.getElementById("hold_dice_button");
 const player1 = document.getElementById("player-1");
 const player2 = document.getElementById("player-2");
+
 let currentPlayer;
 let dice = Math.floor(Math.random() * 6 + 1);
-letDicePicture = document.getElementById("dice-picture");
+let dicePicture = document.getElementById("dice-picture");
 let currentScore = 0;
 let totalScore = 0;
 
@@ -44,20 +47,22 @@ const diceFace = () => {
 
 const player1turn = function () {
   if (currentPlayer === player1) {
+    player1.classList.remove("hidden");
+    player1.classList.add("active", "half-left");
+    player2.classList.remove("active");
+    player2.classList.add("hidden");
+  }
+}; 
+
+const player2turn = function () {
+  if (currentPlayer === player2) {
     player2.classList.remove("hidden");
     player2.classList.add("active", "half-right");
     player1.classList.remove("active");
     player1.classList.add("hidden");
   }
 };
-const player2turn = function () {
-  if (currentPlayer === player2) {
-    player1.classList.remove("hidden");
-    player1.classList.add("active", "half-left");
-    player2.classList.remove("active");
-    player2.classList.add("hidden");
-  }
-};
+
 
 // ****** DÉFINITION DES FONCTIONS DE DÉPART DU JEU ******
 function startNewGame() {
@@ -72,7 +77,7 @@ function chooseNames() {
     return;
   }
   let newName1 = document.getElementById("player-1");
-  newName1.innerHTML = namePlayer1;
+  newName1.textContent = namePlayer1;
 
   let namePlayer2 = prompt("Entrez le nom du joueur 2");
   if (namePlayer2 === null || namePlayer2 === "") {
@@ -81,7 +86,7 @@ function chooseNames() {
     return;
   }
   let newName2 = document.getElementById("player-2");
-  newName2.innerHTML = namePlayer2;
+  newName2.textContent = namePlayer2;
 
   firstToPlay();
 }
@@ -100,53 +105,48 @@ function chooseFirstPlayer() {
     currentPlayer = player2;
   } else {
     currentPlayer = player1;
-
     if (currentPlayer === player1) {
       player1turn();
     } else {
       player2turn();
     }
   }
-  alert(`C'est ${currentPlayer.innerHTML} qui commence !`);
+  alert(`C'est ${currentPlayer.textContent} qui commence !`);
 }
-
-switchTurn();
 
 function switchTurn() {
   if (currentPlayer === player1) {
-    player1turn();
-  } else {
     player2turn();
+  } else {
+    player1turn();
   }
 }
 
 // ****** FONCTIONS DE JEU ******
+rollDiceButton.addEventListener("click", rollDice);
 
 function rollDice() {
   dice = Math.floor(Math.random() * 6 + 1);
   diceFace();
-  return dice;
+  if (dice !== 1) {
+    currentScore += dice;
+    rollDiceButton;
+  } else {
+    switchTurn();
 }
 rollDiceButton();
 
-function rollDiceButton() {
-  document.getElementsByClassName("roll_dice").length;
-  return dice;
+
+
 }
-if (dice !== 1) {
-  alert(` ${currentPlayer.innerHTML} a obtenu un ${dice} !`);
-} else {
-  alert("C'est la fin du tour, vous avez obtenu 1");
-  switchTurn();
-}
-function holdButton() {
-  document.getElementsByClassName("hold-dice").addEventListener("click", hold);
-}
+// function holdButton() {
+//   document.getElementsByClassName("hold_dice_button").addEventListener("click", hold);
+// }
 
 // function currentPoints() {
 //   let points = 0;
 //   points += dice;
-//   currentPoints.innerHTML = points;
+//   currentPoints.textContent = points;
 //   if (dice === 1) {
 //     points = 0;
 //     switchTurn();
@@ -155,6 +155,6 @@ function holdButton() {
 
 // function winTheGame() {
 //   if (currentPlayer === 100) {
-//     alert(`Bravo ${currentPlayer.innerHTML} a gagné !`);
+//     alert(`Bravo ${currentPlayer.textContent} a gagné !`);
 //   }
 // }

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Randon Dice</title>
-    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,7 +31,7 @@
             <span class="material-symbols-outlined add_circle">
             add_circle
             </span> 
-            <input type="submit" name="newgame" id="newgame" value="NEWGAME">
+            <button type="button" id="newgame">NEWGAME</button>
         </div>
 
       <!-- 2EME ROW DE LA GRILLE DU JEU -->
@@ -86,12 +86,12 @@
           </div>
           </div>
           <div class="play-action col-md-2 text-center">
-              <input type="submit" class="roll-dice" value="ROLL DICE">
+              <button type="button" class="roll-dice" id ="roll_dice_button">ROLL DICE</button>
                 <span class="material-symbols-outlined">
                 change_circle
                 </span>
                 <br><br>
-              <input type="submit" class="hold-dice" value="HOLD">
+              <button type="button" class="hold-dice" id="hold_dice_button">HOLD</button>
               <span class="material-symbols-outlined">
                 arrow_circle_down
                 </span>
@@ -112,7 +112,8 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"
-      ></script>
+      >
+      </script>
       <script src="app.js"></script>
     </div>
   </body>
