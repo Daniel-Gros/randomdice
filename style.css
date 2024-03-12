@@ -16,6 +16,7 @@ reset {
   opacity: 1;
 }
 
+
 * {
   font-family: "Lato", sans-serif;
 }
@@ -35,13 +36,15 @@ reset {
   background-color: rgb(201, 95, 95);
 }
 
-.half-left,
-.half-right {
-  display: inline-block;
-  text-align: center;
-  background-color: #b3aba6;
-  font-weight: bold;
+  .point-noir {
+    width: 15px; 
+    height: 15px;
+    background-color: black; 
+    border-radius: 50%; 
+    display: inline-block; 
+    margin-left: 10px;
 }
+
 
 .total-score-1,
 .total-score-2 {
@@ -52,15 +55,22 @@ reset {
   color: rgb(201, 95, 95);
 }
 
+
 #newgame,
 .roll-dice,
 .hold-dice {
-  background: none;
-  border: none;
-  text-decoration: none;
+  background-color: rgb(201, 95, 95);
+  border-radius: 2px;
+  border: solid, black, 3px;
   color: black;
   cursor: pointer;
 }
+
+#newgame:hover, #roll_dice_button:hover, #hold_dice_button:hover {
+  background-color: rgb(231, 125, 125);
+
+}
+
 
 .current-dice {
   display: flex;
@@ -68,7 +78,7 @@ reset {
   align-items: center;
 }
 .current-square {
-  background-color: rgb(236, 88, 88);
+  background-color: rgb(201, 95, 95);
   font-weight: bold;
   text-align: center;
   border-radius: 10px;

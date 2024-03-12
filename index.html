@@ -26,11 +26,8 @@
     <div class="container pt-2 mt-4">
       
       <!-- BLOC NEW GAME 1ERE ROW -->
-
+      
       <div class="new-game text-center pb-4">
-            <span class="material-symbols-outlined add_circle">
-            add_circle
-            </span> 
             <button type="button" id="newgame">NEWGAME</button>
         </div>
 
@@ -40,7 +37,7 @@
       
         <!-- BLOC PLAYER 1 -->
         <div id="player-1" class=" col-md-5 p-2">
-            <p>PLAYER 1</p>
+            <p>PLAYER 1  <span class="point-noir-j1"></span></p>
         </div>
         
         <div class="col-md-2 mt-3">
@@ -49,7 +46,7 @@
 
         <!-- BLOC PLAYER 2 -->
         <div id="player-2" class="col-md-5 p-2">
-            <p>PLAYER 2</p>
+            <p>PLAYER 2  <span class="point-noir-j2"></span></p>
         </div>
       </div>
 
@@ -60,13 +57,13 @@
           0
         </div>
         <div class="col-md-2">
-          <div class="dice-images">
+          <div class="dice-images" id="dice-picture">
             <img src="images/dice-1.svg" alt="Dé 1" id="face1">
-            <!-- <img src="images/dice-2.svg" alt="Dé 2"id="face2">
-            <img src="images/dice-3.svg" alt="Dé 3"id="face3">
-            <img src="images/dice-4.svg" alt="Dé 4"id="face4">
-            <img src="images/dice-5.svg" alt="Dé 5"id="face5">
-            <img src="images/dice-6.svg" alt="Dé 6"id="face6"> -->
+            <img src="images/dice-2.svg" alt="Dé 2"id="face2" class="hidden">
+            <img src="images/dice-3.svg" alt="Dé 3"id="face3" class="hidden">
+            <img src="images/dice-4.svg" alt="Dé 4"id="face4" class="hidden">
+            <img src="images/dice-5.svg" alt="Dé 5"id="face5" class="hidden">
+            <img src="images/dice-6.svg" alt="Dé 6"id="face6" class="hidden">
         </div>
         
           </div>
@@ -80,26 +77,20 @@
           <div class="current-dice col-md-5  p-2">
             <div class="current-square">
             <div>CURRENT</div>
-            <div class="current-score-1">
+            <div class="current_score">
               0
             </div>
           </div>
           </div>
           <div class="play-action col-md-2 text-center">
-              <button type="button" class="roll-dice" id ="roll_dice_button">ROLL DICE</button>
-                <span class="material-symbols-outlined">
-                change_circle
-                </span>
+              <button type="button" class="roll-dice"  id ="roll_dice_button" disabled>ROLL DICE</button>
                 <br><br>
-              <button type="button" class="hold-dice" id="hold_dice_button">HOLD</button>
-              <span class="material-symbols-outlined">
-                arrow_circle_down
-                </span>
+              <button type="button" class="hold-dice" id="hold_dice_button" disabled>HOLD</button>
           </div>
           <div class="current-dice col-md-5 p-2">
             <div class="current-square">
             <div>CURRENT</div>
-            <div class="current-score-2">
+            <div class="current_score">
               0
             </div>
           </div>
