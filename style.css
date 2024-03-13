@@ -14,6 +14,7 @@ reset {
 
 .active {
   opacity: 1;
+  font-weight: bold;
 }
 
 
@@ -66,7 +67,7 @@ reset {
   cursor: pointer;
 }
 
-#newgame:hover, #roll_dice_button:hover, #hold_dice_button:hover {
+#newgame:hover, .roll-dice:hover, .hold-dice:hover {
   background-color: rgb(231, 125, 125);
 
 }
