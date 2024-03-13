@@ -2,7 +2,7 @@
 A game of Random Dice : 
 
 Rules : 
-
+- Click on the newgame button to start a new game.
 - Click On Newgame Button to start a game.
 - After you choose your name , the game will randomly choose who start the game.
 - Click on Roll dice to obtain a current score between 2 and 6, you can after decide to roll the dice again or hold the dice in clicking on the hold dice button.
