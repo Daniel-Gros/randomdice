@@ -24,25 +24,31 @@ reset {
 
 .container {
   width: 70vw;
-  height: 490px; /* mesure en dur pour que vous puissiez inspecter sans problème de rendu vertical */
+  height: 490px;
   border: solid 10px #b3aba6;
+}
+
+.player-inactive {
+  opacity: 0.5;
 }
 
 #player-1,
 #player-2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   display: inline-block;
   text-align: center;
   background-color: rgb(201, 95, 95);
+  border-radius : 7px;
 }
 
   .point-noir {
-    width: 15px; 
-    height: 15px;
+    width: 20px; 
+    height: 20px;
     background-color: black; 
     border-radius: 50%; 
-    display: inline-block; 
+    display: inline-block;
+    margin-top: 30px;
     margin-left: 10px;
 }
 
@@ -72,15 +78,21 @@ reset {
 
 }
 
-
 .current-dice {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .current-square {
   background-color: rgb(201, 95, 95);
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
 }
+
+.player-inactive {
+  opacity: 0.5;
+  font-weight: normal;
+}
+

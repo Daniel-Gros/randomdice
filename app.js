@@ -4,6 +4,9 @@ const diceImage = document.querySelectorAll('.dice-images img');
 const newGameButton = document.querySelector('#newgame');
 const rollDiceButton = document.querySelector(".roll-dice");
 const holdDiceButton = document.querySelector(".hold-dice");
+let pointNoir = document.querySelector('.point-noir');
+
+
 // ****** VARIABLES ******
 
 let scores, roundScore, activePlayer, gamePlaying;
@@ -17,11 +20,13 @@ const initGame = () => {
   document.querySelector('.current-score-2').textContent = "0";
   document.querySelector('.total-score-1').textContent = "0";
   document.querySelector('.total-score-2').textContent = "0";
+  
   // ****** JOUEUR 1 ACTIF PAR DÉFAUT ******
   document.querySelectorAll('.current-dice').forEach((element)=> {
     element.classList.remove('active');
   });
   document.querySelector('.current-dice').classList.add('active');
+
   // ****** AFFICHE SEULEMENT LA FACE 1 DU DÉ ******
   diceImage.forEach((dice, index) => {
     if (index === 0) {
@@ -78,12 +83,22 @@ const nextPlayer = () => {
   roundScore = 0;
   document.querySelector('.current-dice').classList.toggle('active');
   document.querySelectorAll('.current-dice')[activePlayer].classList.add('active');
+  pointNoir.classList.toggle('active');
 };
 
-// ****** ÉVÉNEMENTS ET DÉBUT DE PARTIE ******
 
-newGameButton.addEventListener("click", initGame);
+// ****** ÉVÉNEMENTS ET DÉBUT DE PARTIE ******
+rollDiceButton.disabled = true;
+holdDiceButton.disabled = true;
+
+newGameButton.addEventListener("click", () => {
+  initGame();
+  rollDiceButton.disabled = false;
+  holdDiceButton.disabled = false;
+});
+
 rollDiceButton.addEventListener("click", randomDice);
 holdDiceButton.addEventListener("click", holdScore);
 
 initGame();
+
