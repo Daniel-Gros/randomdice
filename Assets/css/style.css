@@ -1,11 +1,7 @@
 reset {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+  box-sizing: border-box;
 }
 
 .hidden {
@@ -24,7 +20,7 @@ reset {
 
 .container {
   width: 70vw;
-  height: 490px;
+  height: 40vh;
   border: solid 10px #b3aba6;
 }
 
@@ -40,6 +36,11 @@ reset {
   text-align: center;
   background-color: rgb(201, 95, 95);
   border-radius : 7px;
+}
+
+.dice-img {
+  height: auto;
+  width: auto;
 }
 
   .point-noir {

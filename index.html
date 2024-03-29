@@ -4,13 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Dice</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Assets/lib/Bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,7 +30,7 @@
           <div class="col-10">
             <p class="player-n1">PLAYER 1</p>
           </div>
-          <div class="col-2 point-noir"></div>
+          <div class="col-2 point-noir d-none" id="ptnoir1"></div>
         </div>
         <div class="row pt-2">
           <div class="total-score-1 mt-4">0</div>
@@ -48,16 +43,16 @@
         </div>
       </div>
       <div class="col-2">
-        <div class="new-game mt-1">
+        <div class="new-game mt-1 d-flex justify-content-center">
           <button type="button" id="newgame">NEWGAME</button>
         </div>
         <div class="dice-images mt-5">
-          <img src="images/dice-1.svg" alt="Dé 1" id="face1" />
-          <img src="images/dice-2.svg" alt="Dé 2" id="face2" />
-          <img src="images/dice-3.svg" alt="Dé 3" id="face3" />
-          <img src="images/dice-4.svg" alt="Dé 4" id="face4" />
-          <img src="images/dice-5.svg" alt="Dé 5" id="face5" />
-          <img src="images/dice-6.svg" alt="Dé 6" id="face6" />
+          <img src="Assets/images/dice-1.svg" alt="Dé 1" id="face1" class="dice-images"/>
+          <img src="Assets/images/dice-2.svg" alt="Dé 2" id="face2" class="dice-images"/>
+          <img src="Assets/images/dice-3.svg" alt="Dé 3" id="face3" class="dice-images"/>
+          <img src="Assets/images/dice-4.svg" alt="Dé 4" id="face4" class="dice-images"/>
+          <img src="Assets/images/dice-5.svg" alt="Dé 5" id="face5" class="dice-images"/>
+          <img src="Assets/images/dice-6.svg" alt="Dé 6" id="face6" class="dice-images"/>
         </div>
         <div
           class="play-action d-flex justify-content-center align-items-center flex-column"
@@ -75,7 +70,7 @@
           <div class="col-10">
             <p class="player-n2">PLAYER 2</p>
           </div>
-          <div class="col-2 point-noir"></div>
+          <div class="col-2 point-noir d-none" id="ptnoir2"></div>
         </div>
         <div class="row pt-2">
           <div class="total-score-2 mt-4">0</div>
@@ -93,11 +88,6 @@
         Copyright © 2024 - Random Dice Projet Étudiant Daniel Gros
       </h6>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="app.js"></script>
+    <script src="./Assets/js/app.js"></script>
   </body>
 </html>

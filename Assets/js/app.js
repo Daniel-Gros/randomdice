@@ -5,6 +5,8 @@ const newGameButton = document.querySelector('#newgame');
 const rollDiceButton = document.querySelector(".roll-dice");
 const holdDiceButton = document.querySelector(".hold-dice");
 let pointNoir = document.querySelector('.point-noir');
+const ptNoir1 = document.getElementById('ptnoir1');
+const ptNoir2 = document.getElementById('ptnoir2');
 
 
 // ****** VARIABLES ******
@@ -78,12 +80,23 @@ const holdScore = () => {
   }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  ptNoir1.classList.remove('d-none');
+});
+
+const alternateBlackPoint = () => {
+  ptNoir1.classList.toggle('d-none');
+  ptNoir2.classList.toggle('d-none');
+}
+
+
 const nextPlayer = () => {
   activePlayer = activePlayer === 0 ? 1 : 0;
   roundScore = 0;
   document.querySelector('.current-dice').classList.toggle('active');
   document.querySelectorAll('.current-dice')[activePlayer].classList.add('active');
   pointNoir.classList.toggle('active');
+  alternateBlackPoint();
 };
 
 
