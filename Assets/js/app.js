@@ -1,3 +1,7 @@
+// ****** CONFIGURATION DU PORT HEROKU ******
+
+
+
 // ****** SÉLÉCTION DES ÉLÉMENTS DU DOM & STOCKAGE VARIABLES ******
 
 const diceImage = document.querySelectorAll('.dice-images img');
