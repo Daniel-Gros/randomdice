@@ -4,7 +4,7 @@
   "description": "A game of Random Dice :",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node Assets/js/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
